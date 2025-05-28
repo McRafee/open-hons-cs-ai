@@ -8,19 +8,24 @@
 		<style>
 			/* Custom max width for logos */
 			.logo-img {
-				max-width: 100px;
+				max-width: 80px;
 				height: auto;
+			}
+			.logo-on-dark-bg {
+				background-color: rgba(255, 255, 255, 0.08); /* Faint white background */
+				border-radius: 6px; /* Slightly rounded corners */
+				padding: 4px; /* Padding inside the max-width due to border-box */
 			}
 		</style>
 	</head>
-	<body class="bg-gray-50 text-gray-800 antialiased">
+	<body class="bg-gray-900 text-gray-100 antialiased">
 		<!-- Hero -->
-		<header class="bg-white shadow">
+		<header class="bg-gray-800 shadow">
 			<div class="max-w-5xl mx-auto px-6 py-12 text-center">
-				<h1 class="text-4xl font-bold text-indigo-600">
+				<h1 class="text-3xl sm:text-4xl font-bold text-indigo-400">
 					BSc (Hons) Computer Engineering & Artificial Intelligence
 				</h1>
-				<p class="mt-4 text-lg">
+				<p class="mt-4 text-lg text-gray-300">
 					A fully online, project-focused, certification-driven degree
 					equivalent—designed for working professionals (~15 h/week).
 				</p>
@@ -30,13 +35,13 @@
 		<main class="max-w-6xl mx-auto px-6 py-10 space-y-16">
 			<!-- Year 1 -->
 			<section id="year1">
-				<h2 class="text-2xl font-semibold text-indigo-600 mb-4">Year 1</h2>
+				<h2 class="text-2xl font-semibold text-indigo-400 mb-4">Year 1</h2>
 
 				<!-- Sem 1 -->
-				<div>
-					<h3 class="text-xl font-medium mb-2">Semester 1 (30 ECTS)</h3>
-					<div class="overflow-x-auto bg-white shadow rounded-lg">
-						<table class="min-w-full divide-y divide-gray-200">
+				<section>
+					<h3 id="y1s1-title" class="text-xl font-medium mb-2 text-gray-200">Semester 1 (30 ECTS)</h3>
+					<div class="overflow-x-auto bg-gray-800 shadow rounded-lg">
+						<table class="min-w-full divide-y divide-gray-700" aria-labelledby="y1s1-title">
 							<thead class="bg-indigo-600">
 								<tr>
 									<th class="px-4 py-2 text-left text-white">Logo</th>
@@ -46,14 +51,14 @@
 									<th class="px-4 py-2 text-left text-white">Cert.</th>
 								</tr>
 							</thead>
-							<tbody class="divide-y divide-gray-100">
+							<tbody class="divide-y divide-gray-700">
 								<!-- CS50 Web -->
-								<tr class="hover:bg-gray-50">
+								<tr class="hover:bg-gray-700">
 									<td class="p-2">
 										<img
 											src="Harvard_University_logo.svg"
-											alt="Harvard"
-											class="logo-img"
+											alt="Harvard University logo"
+											class="logo-img mx-auto"
 										/>
 									</td>
 									<td class="p-2">
@@ -61,27 +66,27 @@
 											href="https://cs50.harvard.edu/web/"
 											target="_blank"
 											rel="noopener"
-											class="text-indigo-600 hover:underline"
+											class="text-indigo-300 hover:underline"
 										>
 											CS50 Web Programming with Python &amp; JS
 										</a>
 									</td>
-									<td class="p-2">Harvard University</td>
-									<td class="p-2">Portfolio site + REST API</td>
+									<td class="p-2 text-gray-300">Harvard University</td>
+									<td class="p-2 text-gray-300">Portfolio site + REST API</td>
 									<td class="p-2">
 										<span
-											class="px-2 py-1 bg-green-500 text-white rounded-full text-sm"
+											class="px-2 py-1 bg-green-600 text-white rounded-full text-sm"
 											>Free</span
 										>
 									</td>
 								</tr>
 								<!-- CS50x Intro -->
-								<tr class="hover:bg-gray-50">
+								<tr class="hover:bg-gray-700">
 									<td class="p-2">
 										<img
 											src="Harvard_University_logo.svg"
-											alt="Harvard"
-											class="logo-img"
+											alt="Harvard University logo"
+											class="logo-img mx-auto"
 										/>
 									</td>
 									<td class="p-2">
@@ -89,27 +94,27 @@
 											href="https://cs50.harvard.edu/x/"
 											target="_blank"
 											rel="noopener"
-											class="text-indigo-600 hover:underline"
+											class="text-indigo-300 hover:underline"
 										>
 											CS50x Introduction to Computer Science
 										</a>
 									</td>
-									<td class="p-2">Harvard University</td>
-									<td class="p-2">Text-based game in C/Python</td>
+									<td class="p-2 text-gray-300">Harvard University</td>
+									<td class="p-2 text-gray-300">Text-based game in C/Python</td>
 									<td class="p-2">
 										<span
-											class="px-2 py-1 bg-green-500 text-white rounded-full text-sm"
+											class="px-2 py-1 bg-green-600 text-white rounded-full text-sm"
 											>Free</span
 										>
 									</td>
 								</tr>
 								<!-- Networking -->
-								<tr class="hover:bg-gray-50">
+								<tr class="hover:bg-gray-700">
 									<td class="p-2">
 										<img
 											src="Google_2015_logo.svg"
-											alt="Google"
-											class="logo-img"
+											alt="Google logo"
+											class="logo-img mx-auto"
 										/>
 									</td>
 									<td class="p-2">
@@ -117,27 +122,27 @@
 											href="https://www.coursera.org/learn/computer-networking"
 											target="_blank"
 											rel="noopener"
-											class="text-indigo-600 hover:underline"
+											class="text-indigo-300 hover:underline"
 										>
 											Bits &amp; Bytes of Computer Networking
 										</a>
 									</td>
-									<td class="p-2">Google LLC (Coursera)</td>
-									<td class="p-2">Packet Tracer / GNS3 lab</td>
+									<td class="p-2 text-gray-300">Google LLC (Coursera)</td>
+									<td class="p-2 text-gray-300">Packet Tracer / GNS3 lab</td>
 									<td class="p-2">
 										<span
-											class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+											class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 											>Plus</span
 										>
 									</td>
 								</tr>
 								<!-- Architecture -->
-								<tr class="hover:bg-gray-50">
+								<tr class="hover:bg-gray-700">
 									<td class="p-2">
 										<img
 											src="princeton-university-seeklogo.png"
-											alt="Princeton"
-											class="logo-img"
+											alt="Princeton University logo"
+											class="logo-img mx-auto logo-on-dark-bg"
 										/>
 									</td>
 									<td class="p-2">
@@ -145,27 +150,27 @@
 											href="https://www.coursera.org/learn/comparch"
 											target="_blank"
 											rel="noopener"
-											class="text-indigo-600 hover:underline"
+											class="text-indigo-300 hover:underline"
 										>
 											Computer Architecture
 										</a>
 									</td>
-									<td class="p-2">Princeton University</td>
-									<td class="p-2">5-stage pipeline simulator</td>
+									<td class="p-2 text-gray-300">Princeton University</td>
+									<td class="p-2 text-gray-300">5-stage pipeline simulator</td>
 									<td class="p-2">
 										<span
-											class="px-2 py-1 bg-gray-300 text-gray-700 rounded-full text-sm"
+											class="px-2 py-1 bg-gray-600 text-gray-200 rounded-full text-sm"
 											>n/a</span
 										>
 									</td>
 								</tr>
 								<!-- Discrete Math -->
-								<tr class="hover:bg-gray-50">
+								<tr class="hover:bg-gray-700">
 									<td class="p-2">
 										<img
 											src="University_of_California,_Irvine_logo.svg"
-											alt="UCI"
-											class="logo-img"
+											alt="University of California, Irvine logo"
+											class="logo-img mx-auto"
 										/>
 									</td>
 									<td class="p-2">
@@ -173,27 +178,31 @@
 											href="https://www.coursera.org/learn/discrete-mathematics"
 											target="_blank"
 											rel="noopener"
-											class="text-indigo-600 hover:underline"
+											class="text-indigo-300 hover:underline"
 										>
 											Intro to Discrete Math for CS
 										</a>
 									</td>
-									<td class="p-2">HSE University &amp; UC San Diego</td>
-									<td class="p-2">Graphs &amp; Dijkstra report</td>
+									<td class="p-2 text-gray-300">
+										HSE University &amp; UC San Diego
+									</td>
+									<td class="p-2 text-gray-300">
+										Graphs &amp; Dijkstra report
+									</td>
 									<td class="p-2">
 										<span
-											class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+											class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 											>Plus</span
 										>
 									</td>
 								</tr>
 								<!-- Academic English -->
-								<tr class="hover:bg-gray-50">
+								<tr class="hover:bg-gray-700">
 									<td class="p-2">
 										<img
 											src="University_of_California,_Irvine_logo.svg"
-											alt="UCI"
-											class="logo-img"
+											alt="University of California, Irvine logo"
+											class="logo-img mx-auto"
 										/>
 									</td>
 									<td class="p-2">
@@ -201,16 +210,18 @@
 											href="https://www.coursera.org/specializations/academic-english"
 											target="_blank"
 											rel="noopener"
-											class="text-indigo-600 hover:underline"
+											class="text-indigo-300 hover:underline"
 										>
 											Academic English: Writing
 										</a>
 									</td>
-									<td class="p-2">University of California, Irvine</td>
-									<td class="p-2">Technical blog post</td>
+									<td class="p-2 text-gray-300">
+										University of California, Irvine
+									</td>
+									<td class="p-2 text-gray-300">Technical blog post</td>
 									<td class="p-2">
 										<span
-											class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+											class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 											>Plus</span
 										>
 									</td>
@@ -218,13 +229,13 @@
 							</tbody>
 						</table>
 					</div>
-				</div>
+				</section>
 
 				<!-- Sem 2 -->
-				<div>
-					<h3 class="text-xl font-medium mb-2">Semester 2 (24 ECTS)</h3>
-					<div class="overflow-x-auto bg-white shadow rounded-lg">
-						<table class="min-w-full divide-y divide-gray-200">
+				<section>
+					<h3 id="y1s2-title" class="text-xl font-medium mb-2 text-gray-200">Semester 2 (24 ECTS)</h3>
+					<div class="overflow-x-auto bg-gray-800 shadow rounded-lg">
+						<table class="min-w-full divide-y divide-gray-700" aria-labelledby="y1s2-title">
 							<thead class="bg-indigo-600">
 								<tr>
 									<th class="px-4 py-2 text-left text-white">Logo</th>
@@ -234,14 +245,14 @@
 									<th class="px-4 py-2 text-left text-white">Cert.</th>
 								</tr>
 							</thead>
-							<tbody class="divide-y divide-gray-100">
+							<tbody class="divide-y divide-gray-700">
 								<!-- Maths ML -->
-								<tr class="hover:bg-gray-50">
+								<tr class="hover:bg-gray-700">
 									<td class="p-2">
 										<img
 											src="imperial-college.svg"
-											alt="Imperial"
-											class="logo-img"
+											alt="Imperial College London logo"
+											class="logo-img mx-auto logo-on-dark-bg"
 										/>
 									</td>
 									<td class="p-2">
@@ -249,27 +260,27 @@
 											href="https://www.coursera.org/specializations/mathematics-machine-learning"
 											target="_blank"
 											rel="noopener"
-											class="text-indigo-600 hover:underline"
+											class="text-indigo-300 hover:underline"
 										>
 											Mathematics for Machine Learning
 										</a>
 									</td>
-									<td class="p-2">Imperial College London</td>
-									<td class="p-2">Linear algebra notebook</td>
+									<td class="p-2 text-gray-300">Imperial College London</td>
+									<td class="p-2 text-gray-300">Linear algebra notebook</td>
 									<td class="p-2">
 										<span
-											class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+											class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 											>Plus</span
 										>
 									</td>
 								</tr>
 								<!-- Critical Thinking -->
-								<tr class="hover:bg-gray-50">
+								<tr class="hover:bg-gray-700">
 									<td class="p-2">
 										<img
 											src="University_of_Michigan_logo.svg"
-											alt="Michigan"
-											class="logo-img"
+											alt="University of Michigan logo"
+											class="logo-img mx-auto logo-on-dark-bg"
 										/>
 									</td>
 									<td class="p-2">
@@ -277,51 +288,51 @@
 											href="https://www.coursera.org/learn/mindware"
 											target="_blank"
 											rel="noopener"
-											class="text-indigo-600 hover:underline"
+											class="text-indigo-300 hover:underline"
 										>
 											Mindware: Critical Thinking
 										</a>
 									</td>
-									<td class="p-2">University of Michigan</td>
-									<td class="p-2">Critical analysis report</td>
+									<td class="p-2 text-gray-300">University of Michigan</td>
+									<td class="p-2 text-gray-300">Critical analysis report</td>
 									<td class="p-2">
 										<span
-											class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+											class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 											>Plus</span
 										>
 									</td>
 								</tr>
 								<!-- IBM Z -->
-								<tr class="hover:bg-gray-50">
+								<tr class="hover:bg-gray-700">
 									<td class="p-2">
-										<img src="IBM_logo.svg" alt="IBM" class="logo-img" />
+										<img src="IBM_logo.svg" alt="IBM logo" class="logo-img mx-auto" />
 									</td>
 									<td class="p-2">
 										<a
 											href="https://www.coursera.org/learn/system-programming"
 											target="_blank"
 											rel="noopener"
-											class="text-indigo-600 hover:underline"
+											class="text-indigo-300 hover:underline"
 										>
 											Basic System Programming on IBM Z
 										</a>
 									</td>
-									<td class="p-2">IBM Skills Network</td>
-									<td class="p-2">Minimal POSIX shell</td>
+									<td class="p-2 text-gray-300">IBM Skills Network</td>
+									<td class="p-2 text-gray-300">Minimal POSIX shell</td>
 									<td class="p-2">
 										<span
-											class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+											class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 											>Plus</span
 										>
 									</td>
 								</tr>
 								<!-- OOP Java -->
-								<tr class="hover:bg-gray-50">
+								<tr class="hover:bg-gray-700">
 									<td class="p-2">
 										<img
 											src="University_at_Buffalo_logo.svg"
-											alt="Buffalo"
-											class="logo-img"
+											alt="University at Buffalo logo"
+											class="logo-img mx-auto"
 										/>
 									</td>
 									<td class="p-2">
@@ -329,27 +340,27 @@
 											href="https://www.coursera.org/specializations/object-oriented-programming"
 											target="_blank"
 											rel="noopener"
-											class="text-indigo-600 hover:underline"
+											class="text-indigo-300 hover:underline"
 										>
 											Object-Oriented Programming in Java
 										</a>
 									</td>
-									<td class="p-2">Duke University &amp; UC San Diego</td>
-									<td class="p-2">Java GUI app</td>
+									<td class="p-2 text-gray-300">Duke University &amp; UC San Diego</td>
+									<td class="p-2 text-gray-300">Java GUI app</td>
 									<td class="p-2">
 										<span
-											class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+											class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 											>Plus</span
 										>
 									</td>
 								</tr>
 								<!-- freeCodeCamp -->
-								<tr class="hover:bg-gray-50">
+								<tr class="hover:bg-gray-700">
 									<td class="p-2">
 										<img
 											src="FreeCodeCamp_logo.svg"
-											alt="freeCodeCamp"
-											class="logo-img"
+											alt="freeCodeCamp logo"
+											class="logo-img mx-auto logo-on-dark-bg"
 										/>
 									</td>
 									<td class="p-2">
@@ -357,16 +368,16 @@
 											href="https://www.freecodecamp.org/learn/front-end-development-libraries"
 											target="_blank"
 											rel="noopener"
-											class="text-indigo-600 hover:underline"
+											class="text-indigo-300 hover:underline"
 										>
 											Front-End Development Libraries
 										</a>
 									</td>
-									<td class="p-2">freeCodeCamp.org</td>
-									<td class="p-2">React SPA + API</td>
+									<td class="p-2 text-gray-300">freeCodeCamp.org</td>
+									<td class="p-2 text-gray-300">React SPA + API</td>
 									<td class="p-2">
 										<span
-											class="px-2 py-1 bg-green-500 text-white rounded-full text-sm"
+											class="px-2 py-1 bg-green-600 text-white rounded-full text-sm"
 											>Free</span
 										>
 									</td>
@@ -374,18 +385,18 @@
 							</tbody>
 						</table>
 					</div>
-				</div>
+				</section>
 			</section>
 
 			<!-- Year 2 -->
 			<section id="year2">
-				<h2 class="text-2xl font-semibold text-indigo-600 mb-4">Year 2</h2>
+				<h2 class="text-2xl font-semibold text-indigo-400 mb-4">Year 2</h2>
 				<div class="space-y-8">
 					<!-- Semester 3 -->
-					<div>
-						<h3 class="text-xl font-medium mb-2">Semester 3 (30 ECTS)</h3>
-						<div class="overflow-x-auto bg-white shadow rounded-lg">
-							<table class="min-w-full divide-y divide-gray-200">
+					<section>
+						<h3 id="y2s3-title" class="text-xl font-medium mb-2 text-gray-200">Semester 3 (30 ECTS)</h3>
+						<div class="overflow-x-auto bg-gray-800 shadow rounded-lg">
+							<table class="min-w-full divide-y divide-gray-700" aria-labelledby="y2s3-title">
 								<thead class="bg-indigo-600">
 									<tr>
 										<th class="px-4 py-2 text-left text-white">Logo</th>
@@ -395,14 +406,14 @@
 										<th class="px-4 py-2 text-left text-white">Cert.</th>
 									</tr>
 								</thead>
-								<tbody class="divide-y divide-gray-100">
+								<tbody class="divide-y divide-gray-700">
 									<!-- Data Structures & Algorithms -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="University_of_California,_Irvine_logo.svg"
-												alt="UCSD"
-												class="logo-img"
+												alt="University of California, Irvine logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -410,49 +421,49 @@
 												href="https://www.coursera.org/specializations/data-structures-algorithms"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>Data Structures &amp; Algorithms</a
 											>
 										</td>
-										<td class="p-2">UC San Diego &amp; HSE University</td>
-										<td class="p-2">10 algorithms &amp; Big-O analysis</td>
+										<td class="p-2 text-gray-300">UC San Diego &amp; HSE University</td>
+										<td class="p-2 text-gray-300">10 algorithms &amp; Big-O analysis</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
 									</tr>
 									<!-- Relational Databases -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
-											<img src="IBM_logo.svg" alt="IBM" class="logo-img" />
+											<img src="IBM_logo.svg" alt="IBM logo" class="logo-img mx-auto" />
 										</td>
 										<td class="p-2">
 											<a
 												href="https://www.coursera.org/learn/sql-data-science"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>Databases &amp; SQL for Data Science</a
 											>
 										</td>
-										<td class="p-2">IBM Skills Network</td>
-										<td class="p-2">CRUD API with Flask</td>
+										<td class="p-2 text-gray-300">IBM Skills Network</td>
+										<td class="p-2 text-gray-300">CRUD API with Flask</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
 									</tr>
 									<!-- Operating Systems -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="Google_2015_logo.svg"
-												alt="Google"
-												class="logo-img"
+												alt="Google logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -460,26 +471,26 @@
 												href="https://www.coursera.org/learn/os-and-you"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>Operating Systems and You</a
 											>
 										</td>
-										<td class="p-2">Google LLC (Coursera)</td>
-										<td class="p-2">Mini-Linux distro</td>
+										<td class="p-2 text-gray-300">Google LLC (Coursera)</td>
+										<td class="p-2 text-gray-300">Mini-Linux distro</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
 									</tr>
 									<!-- Software Design & Architecture -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="ua-logo-reversed-white.svg"
-												alt="Alberta"
-												class="logo-img"
+												alt="University of Alberta logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -487,26 +498,26 @@
 												href="https://www.coursera.org/specializations/software-design-architecture"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>Software Design &amp; Architecture</a
 											>
 										</td>
-										<td class="p-2">University of Alberta</td>
-										<td class="p-2">Refactor monolith → MVC</td>
+										<td class="p-2 text-gray-300">University of Alberta</td>
+										<td class="p-2 text-gray-300">Refactor monolith → MVC</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
 									</tr>
 									<!-- Statistics with Python -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="University_of_Michigan_logo.svg"
-												alt="Michigan"
-												class="logo-img"
+												alt="University of Michigan logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -514,15 +525,15 @@
 												href="https://www.coursera.org/specializations/statistics-with-python"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>Statistics with Python</a
 											>
 										</td>
-										<td class="p-2">University of Michigan</td>
-										<td class="p-2">A/B test report in Jupyter</td>
+										<td class="p-2 text-gray-300">University of Michigan</td>
+										<td class="p-2 text-gray-300">A/B test report in Jupyter</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
@@ -530,13 +541,13 @@
 								</tbody>
 							</table>
 						</div>
-					</div>
+					</section>
 
 					<!-- Semester 4 -->
-					<div>
-						<h3 class="text-xl font-medium mb-2">Semester 4 (30 ECTS)</h3>
-						<div class="overflow-x-auto bg-white shadow rounded-lg">
-							<table class="min-w-full divide-y divide-gray-200">
+					<section>
+						<h3 id="y2s4-title" class="text-xl font-medium mb-2 text-gray-200">Semester 4 (30 ECTS)</h3>
+						<div class="overflow-x-auto bg-gray-800 shadow rounded-lg">
+							<table class="min-w-full divide-y divide-gray-700" aria-labelledby="y2s4-title">
 								<thead class="bg-indigo-600">
 									<tr>
 										<th class="px-4 py-2 text-left text-white">Logo</th>
@@ -546,14 +557,14 @@
 										<th class="px-4 py-2 text-left text-white">Cert.</th>
 									</tr>
 								</thead>
-								<tbody class="divide-y divide-gray-100">
+								<tbody class="divide-y divide-gray-700">
 									<!-- Machine Learning -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="deeplearning-ai.svg"
-												alt="DeepLearning.AI"
-												class="logo-img"
+												alt="DeepLearning.AI logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -561,28 +572,28 @@
 												href="https://www.coursera.org/specializations/machine-learning"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>Machine Learning</a
 											>
 										</td>
-										<td class="p-2">
+										<td class="p-2 text-gray-300">
 											DeepLearning.AI &amp; Stanford University
 										</td>
-										<td class="p-2">Supervised ML model on real data</td>
+										<td class="p-2 text-gray-300">Supervised ML model on real data</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
 									</tr>
 									<!-- Google Cloud Fundamentals -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="Google_2015_logo.svg"
-												alt="Google Cloud"
-												class="logo-img"
+												alt="Google Cloud logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -590,49 +601,49 @@
 												href="https://www.coursera.org/learn/gcp-fundamentals"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>Google Cloud Fundamentals: Core Infra</a
 											>
 										</td>
-										<td class="p-2">Google Cloud</td>
-										<td class="p-2">Deploy microservices on GKE</td>
+										<td class="p-2 text-gray-300">Google Cloud</td>
+										<td class="p-2 text-gray-300">Deploy microservices on GKE</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
 									</tr>
 									<!-- DevOps, Cloud & Agile -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
-											<img src="IBM_logo.svg" alt="IBM" class="logo-img" />
+											<img src="IBM_logo.svg" alt="IBM logo" class="logo-img mx-auto" />
 										</td>
 										<td class="p-2">
 											<a
 												href="https://www.coursera.org/specializations/devops-cloud-agile-foundations"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>DevOps, Cloud &amp; Agile Foundations</a
 											>
 										</td>
-										<td class="p-2">IBM Skills Network</td>
-										<td class="p-2">CI/CD with GitHub Actions</td>
+										<td class="p-2 text-gray-300">IBM Skills Network</td>
+										<td class="p-2 text-gray-300">CI/CD with GitHub Actions</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
 									</tr>
 									<!-- Computer Vision Basics -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="University_at_Buffalo_logo.svg"
-												alt="Buffalo"
-												class="logo-img"
+												alt="University at Buffalo logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -640,15 +651,15 @@
 												href="https://www.coursera.org/learn/computer-vision-basics"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>Computer Vision Basics</a
 											>
 										</td>
-										<td class="p-2">University at Buffalo &amp; SUNY</td>
-										<td class="p-2">OpenCV image classifier</td>
+										<td class="p-2 text-gray-300">University at Buffalo &amp; SUNY</td>
+										<td class="p-2 text-gray-300">OpenCV image classifier</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
@@ -656,21 +667,21 @@
 								</tbody>
 							</table>
 						</div>
-					</div>
+					</section>
 				</div>
 			</section>
 
 			<!-- Year 3 -->
 			<section id="year3">
-				<h2 class="text-2xl font-semibold text-indigo-600 mb-4">Year 3</h2>
+				<h2 class="text-2xl font-semibold text-indigo-400 mb-4">Year 3</h2>
 				<div class="space-y-8">
 					<!-- Semester 5 -->
-					<div>
-						<h3 class="text-xl font-medium mb-2">
+					<section>
+						<h3 id="y3s5-title" class="text-xl font-medium mb-2 text-gray-200">
 							Semester 5 (30 ECTS, choose ≥4)
 						</h3>
-						<div class="overflow-x-auto bg-white shadow rounded-lg">
-							<table class="min-w-full divide-y divide-gray-200">
+						<div class="overflow-x-auto bg-gray-800 shadow rounded-lg">
+							<table class="min-w-full divide-y divide-gray-700" aria-labelledby="y3s5-title">
 								<thead class="bg-indigo-600">
 									<tr>
 										<th class="px-4 py-2 text-left text-white">Logo</th>
@@ -680,14 +691,14 @@
 										<th class="px-4 py-2 text-left text-white">Cert.</th>
 									</tr>
 								</thead>
-								<tbody class="divide-y divide-gray-100">
+								<tbody class="divide-y divide-gray-700">
 									<!-- Deep Learning -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="deeplearning-ai.svg"
-												alt="DeepLearning.AI"
-												class="logo-img"
+												alt="DeepLearning.AI logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -695,26 +706,26 @@
 												href="https://www.coursera.org/specializations/deep-learning"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>Deep Learning</a
 											>
 										</td>
-										<td class="p-2">DeepLearning.AI</td>
-										<td class="p-2">CNN in TensorFlow</td>
+										<td class="p-2 text-gray-300">DeepLearning.AI</td>
+										<td class="p-2 text-gray-300">CNN in TensorFlow</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
 									</tr>
 									<!-- Natural Language Processing -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="deeplearning-ai.svg"
-												alt="DeepLearning.AI"
-												class="logo-img"
+												alt="DeepLearning.AI logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -722,26 +733,26 @@
 												href="https://www.coursera.org/specializations/natural-language-processing"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>Natural Language Processing</a
 											>
 										</td>
-										<td class="p-2">DeepLearning.AI</td>
-										<td class="p-2">Sentiment analysis API</td>
+										<td class="p-2 text-gray-300">DeepLearning.AI</td>
+										<td class="p-2 text-gray-300">Sentiment analysis API</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
 									</tr>
 									<!-- Generative AI with LLMs -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="Google_2015_logo.svg"
-												alt="Google & DeepLearning.AI"
-												class="logo-img"
+												alt="Google and DeepLearning.AI logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -749,26 +760,26 @@
 												href="https://www.coursera.org/learn/generative-ai"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>Generative AI with LLMs</a
 											>
 										</td>
-										<td class="p-2">Google Cloud &amp; DeepLearning.AI</td>
-										<td class="p-2">LangChain chatbot</td>
+										<td class="p-2 text-gray-300">Google Cloud &amp; DeepLearning.AI</td>
+										<td class="p-2 text-gray-300">LangChain chatbot</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
 									</tr>
 									<!-- Intro to IoT -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="University_of_California,_Irvine_logo.svg"
-												alt="UCI"
-												class="logo-img"
+												alt="University of California, Irvine logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -776,26 +787,26 @@
 												href="https://www.coursera.org/specializations/programming-iot"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>Intro to Programming the IoT</a
 											>
 										</td>
-										<td class="p-2">University of California, Irvine</td>
-										<td class="p-2">Arduino sensor + MQTT dashboard</td>
+										<td class="p-2 text-gray-300">University of California, Irvine</td>
+										<td class="p-2 text-gray-300">Arduino sensor + MQTT dashboard</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-orange-400 text-black rounded-full text-sm"
+												class="px-2 py-1 bg-orange-500 text-black rounded-full text-sm"
 												>Plus</span
 											>
 										</td>
 									</tr>
 									<!-- CS50 AI -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="Harvard_University_logo.svg"
-												alt="Harvard"
-												class="logo-img"
+												alt="Harvard University logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -803,26 +814,26 @@
 												href="https://cs50.harvard.edu/ai/"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>CS50’s AI with Python</a
 											>
 										</td>
-										<td class="p-2">Harvard University</td>
-										<td class="p-2">A* &amp; Minimax game agent</td>
+										<td class="p-2 text-gray-300">Harvard University</td>
+										<td class="p-2 text-gray-300">A* &amp; Minimax game agent</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-green-500 text-white rounded-full text-sm"
+												class="px-2 py-1 bg-green-600 text-white rounded-full text-sm"
 												>Free</span
 											>
 										</td>
 									</tr>
 									<!-- AWS Cloud Practitioner -->
-									<tr class="hover:bg-gray-50">
+									<tr class="hover:bg-gray-700">
 										<td class="p-2">
 											<img
 												src="Amazon_Web_Services_Logo.svg"
-												alt="AWS"
-												class="logo-img"
+												alt="Amazon Web Services logo"
+												class="logo-img mx-auto"
 											/>
 										</td>
 										<td class="p-2">
@@ -830,12 +841,12 @@
 												href="https://www.coursera.org/learn/aws-cloud-practitioner-essentials"
 												target="_blank"
 												rel="noopener"
-												class="text-indigo-600 hover:underline"
+												class="text-indigo-300 hover:underline"
 												>AWS Cloud Practitioner Essentials</a
 											>
 										</td>
-										<td class="p-2">Amazon Web Services</td>
-										<td class="p-2">Certification exam prep</td>
+										<td class="p-2 text-gray-300">Amazon Web Services</td>
+										<td class="p-2 text-gray-300">Certification exam prep</td>
 										<td class="p-2">
 											<span
 												class="px-2 py-1 bg-red-500 text-white rounded-full text-sm"
@@ -846,13 +857,13 @@
 								</tbody>
 							</table>
 						</div>
-					</div>
+					</section>
 
 					<!-- Semester 6 -->
-					<div>
-						<h3 class="text-xl font-medium mb-2">Semester 6 (24 ECTS)</h3>
-						<div class="overflow-x-auto bg-white shadow rounded-lg">
-							<table class="min-w-full divide-y divide-gray-200">
+					<section>
+						<h3 id="y3s6-title" class="text-xl font-medium mb-2 text-gray-200">Semester 6 (24 ECTS)</h3>
+						<div class="overflow-x-auto bg-gray-800 shadow rounded-lg">
+							<table class="min-w-full divide-y divide-gray-700" aria-labelledby="y3s6-title">
 								<thead class="bg-indigo-600">
 									<tr>
 										<th class="px-4 py-2 text-left text-white">Activity</th>
@@ -861,47 +872,46 @@
 										<th class="px-4 py-2 text-left text-white">Cert.</th>
 									</tr>
 								</thead>
-								<tbody class="divide-y divide-gray-100">
+								<tbody class="divide-y divide-gray-700">
 									<!-- Thesis -->
-									<tr class="hover:bg-gray-50">
-										<td class="p-2">Bachelor Thesis</td>
-										<td class="p-2">Mentoring &amp; ACM guidelines</td>
-										<td class="p-2">8 000-word paper + GitHub demo</td>
+									<tr class="hover:bg-gray-700">
+										<td class="p-2 text-gray-300">Bachelor Thesis</td>
+										<td class="p-2 text-gray-300">Mentoring &amp; ACM guidelines</td>
+										<td class="p-2 text-gray-300">8 000-word paper + GitHub demo</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-gray-300 text-gray-700 rounded-full text-sm"
+												class="px-2 py-1 bg-gray-600 text-gray-200 rounded-full text-sm"
 												>n/a</span
 											>
 										</td>
 									</tr>
 									<!-- Project Management -->
-									<tr class="hover:bg-gray-50">
-										<td class="p-2">Project Management</td>
-										<td class="p-2">
+									<tr class="hover:bg-gray-700">
+										<td class="p-2 text-gray-300">Project Management</td>
+										<td class="p-2 text-gray-300">
 											<img
-												class="logo-img inline"
 												src="FreeCodeCamp_logo.svg"
-												alt="freeCodeCamp"
+												alt="freeCodeCamp logo"
 												class="inline h-6 align-text-bottom"
 											/>
 											Agile Scrum (freeCodeCamp)
 										</td>
-										<td class="p-2">Kanban board &amp; retrospective</td>
+										<td class="p-2 text-gray-300">Kanban board &amp; retrospective</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-green-500 text-white rounded-full text-sm"
+												class="px-2 py-1 bg-green-600 text-white rounded-full text-sm"
 												>Free</span
 											>
 										</td>
 									</tr>
 									<!-- Portfolio & Networking -->
-									<tr class="hover:bg-gray-50">
-										<td class="p-2">Portfolio &amp; Networking</td>
-										<td class="p-2">GitHub / Dev.to / LinkedIn</td>
-										<td class="p-2">Public showcase &amp; community</td>
+									<tr class="hover:bg-gray-700">
+										<td class="p-2 text-gray-300">Portfolio &amp; Networking</td>
+										<td class="p-2 text-gray-300">GitHub / Dev.to / LinkedIn</td>
+										<td class="p-2 text-gray-300">Public showcase &amp; community</td>
 										<td class="p-2">
 											<span
-												class="px-2 py-1 bg-green-500 text-white rounded-full text-sm"
+												class="px-2 py-1 bg-green-600 text-white rounded-full text-sm"
 												>Free</span
 											>
 										</td>
@@ -909,16 +919,16 @@
 								</tbody>
 							</table>
 						</div>
-					</div>
+					</section>
 				</div>
 			</section>
 
 			<!-- Cost & Time -->
-			<section id="summary" class="bg-white shadow rounded-lg p-6">
-				<h2 class="text-2xl font-semibold text-indigo-600 mb-4">
+			<section id="summary" class="bg-gray-800 shadow rounded-lg p-6">
+				<h2 class="text-2xl font-semibold text-indigo-400 mb-4">
 					Estimated Time &amp; Cost
 				</h2>
-				<p>
+				<p class="text-gray-300">
 					<strong>Cost (2025):</strong> Coursera Plus €365/year → €1 095 for 3
 					years. AWS exam ~€92 (optional).<br />CS50 & freeCodeCamp certificates
 					are free. <br /><strong>Total ≈€1 187</strong>.
