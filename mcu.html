@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Timeline Narrativa MCU</title>
+  <style>
+    /* Stile principale */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.4;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    p.intro {
+      text-align: center;
+      margin-bottom: 30px;
+      font-style: italic;
+      color: #555;
+    }
+
+    /* Contenitore orizzontale per la timeline */
+    #timeline {
+      display: flex;
+      overflow-x: auto;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #ccc;
+      scroll-behavior: smooth;
+    }
+
+    /* Singolo elemento film */
+    .film {
+      flex: 0 0 auto;
+      width: 180px;
+      margin-right: 20px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      transition: background-color 0.2s;
+    }
+    .film:hover {
+      background-color: #e0e0e0;
+    }
+    /* Piccola linea che connette ogni film alla linea di base */
+    .film::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background-color: #ccc;
+      transform: translateX(-50%);
+    }
+    /* Nascondi la linea sotto l'ultimo elemento */
+    .film:last-child::before {
+      display: none;
+    }
+    /* Titolo del film */
+    .film .title {
+      font-weight: bold;
+      font-size: 0.95em;
+      margin-bottom: 5px;
+    }
+    /* Anno narrativo */
+    .film .year {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.85em;
+      color: #666;
+    }
+
+    /* Pannello informativo sotto la timeline */
+    #info-panel {
+      margin-top: 30px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fafafa;
+      min-height: 80px;
+    }
+    #info-panel h2 {
+      margin-top: 0;
+      font-size: 1.2em;
+    }
+    #info-panel p {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Chronologia Narrativa dei Film MCU</h1>
+  <p class="intro">Scorri orizzontalmente la timeline e clicca su un film per vedere i personaggi principali.</p>
+
+  <div id="timeline">
+    <div class="film" data-title="Captain America: The First Avenger" data-year="1942–1945" data-characters="Steve Rogers, Peggy Carter, Bucky Barnes">
+      <div class="title">Captain America: The First Avenger</div>
+      <span class="year">1942–1945</span>
+    </div>
+    <div class="film" data-title="Captain Marvel" data-year="1995" data-characters="Carol Danvers, Nick Fury, Yon-Rogg">
+      <div class="title">Captain Marvel</div>
+      <span class="year">1995</span>
+    </div>
+    <div class="film" data-title="Iron Man" data-year="2010" data-characters="Tony Stark, Pepper Potts, James \"Rhodey\" Rhodes">
+      <div class="title">Iron Man</div>
+      <span class="year">2010</span>
+    </div>
+    <div class="film" data-title="Iron Man 2" data-year="2011" data-characters="Tony Stark, Natasha Romanoff, James Rhodes">
+      <div class="title">Iron Man 2</div>
+      <span class="year">2011</span>
+    </div>
+    <div class="film" data-title="The Incredible Hulk" data-year="2011" data-characters="Bruce Banner, Betty Ross, Emil Blonsky">
+      <div class="title">The Incredible Hulk</div>
+      <span class="year">2011</span>
+    </div>
+    <div class="film" data-title="Thor" data-year="2011" data-characters="Thor Odinson, Loki, Jane Foster">
+      <div class="title">Thor</div>
+      <span class="year">2011</span>
+    </div>
+    <div class="film" data-title="The Avengers" data-year="2012" data-characters="Steve Rogers, Tony Stark, Thor, Bruce Banner, Natasha Romanoff, Clint Barton">
+      <div class="title">The Avengers</div>
+      <span class="year">2012</span>
+    </div>
+    <div class="film" data-title="Iron Man 3" data-year="2012" data-characters="Tony Stark, Pepper Potts, Aldrich Killian">
+      <div class="title">Iron Man 3</div>
+      <span class="year">2012</span>
+    </div>
+    <div class="film" data-title="Thor: The Dark World" data-year="2013" data-characters="Thor Odinson, Loki, Jane Foster">
+      <div class="title">Thor: The Dark World</div>
+      <span class="year">2013</span>
+    </div>
+    <div class="film" data-title="Captain America: The Winter Soldier" data-year="2014" data-characters="Steve Rogers, Natasha Romanoff, Bucky Barnes">
+      <div class="title">Captain America: The Winter Soldier</div>
+      <span class="year">2014</span>
+    </div>
+    <div class="film" data-title="Guardians of the Galaxy" data-year="2014" data-characters="Peter Quill, Gamora, Drax, Rocket, Groot">
+      <div class="title">Guardians of the Galaxy</div>
+      <span class="year">2014</span>
+    </div>
+    <div class="film" data-title="Guardians of the Galaxy Vol. 2" data-year="2014" data-characters="Peter Quill, Gamora, Drax, Rocket, Groot, Yondu">
+      <div class="title">Guardians of the Galaxy Vol. 2</div>
+      <span class="year">2014</span>
+    </div>
+    <div class="film" data-title="Avengers: Age of Ultron" data-year="2015" data-characters="Tony Stark, Steve Rogers, Thor, Bruce Banner, Natasha Romanoff, Vision, Wanda Maximoff">
+      <div class="title">Avengers: Age of Ultron</div>
+      <span class="year">2015</span>
+    </div>
+    <div class="film" data-title="Ant-Man" data-year="2015" data-characters="Scott Lang, Hank Pym, Hope van Dyne">
+      <div class="title">Ant-Man</div>
+      <span class="year">2015</span>
+    </div>
+    <div class="film" data-title="Captain America: Civil War" data-year="2016" data-characters="Steve Rogers, Tony Stark, Black Panther, Spider-Man, Natasha Romanoff">
+      <div class="title">Captain America: Civil War</div>
+      <span class="year">2016</span>
+    </div>
+    <div class="film" data-title="Black Widow" data-year="2016" data-characters="Natasha Romanoff, Yelena Belova, Red Guardian">
+      <div class="title">Black Widow</div>
+      <span class="year">2016</span>
+    </div>
+    <div class="film" data-title="Black Panther" data-year="2017" data-characters="T’Challa, Shuri, Okoye, Erik Killmonger">
+      <div class="title">Black Panther</div>
+      <span class="year">2017</span>
+    </div>
+    <div class="film" data-title="Spider-Man: Homecoming" data-year="2017" data-characters="Peter Parker, Tony Stark, Adrian Toomes">
+      <div class="title">Spider-Man: Homecoming</div>
+      <span class="year">2017</span>
+    </div>
+    <div class="film" data-title="Doctor Strange" data-year="2016–2017" data-characters="Stephen Strange, Dr. Christine Palmer, Wong">
+      <div class="title">Doctor Strange</div>
+      <span class="year">2016–2017</span>
+    </div>
+    <div class="film" data-title="Thor: Ragnarok" data-year="2017" data-characters="Thor Odinson, Hulk, Loki, Valkyrie">
+      <div class="title">Thor: Ragnarok</div>
+      <span class="year">2017</span>
+    </div>
+    <div class="film" data-title="Ant-Man and the Wasp" data-year="2018" data-characters="Scott Lang, Hope van Dyne, Hank Pym">
+      <div class="title">Ant-Man and the Wasp</div>
+      <span class="year">2018</span>
+    </div>
+    <div class="film" data-title="Avengers: Infinity War" data-year="2018" data-characters="Thor, Iron Man, Captain America, Black Panther, Doctor Strange, Spider-Man">
+      <div class="title">Avengers: Infinity War</div>
+      <span class="year">2018</span>
+    </div>
+    <div class="film" data-title="Eternals" data-year="2021" data-characters="Sersi, Ikaris, Kingo, Sprite, Thena">
+      <div class="title">Eternals</div>
+      <span class="year">2021</span>
+    </div>
+    <div class="film" data-title="Avengers: Endgame" data-year="2018–2023" data-characters="Steve Rogers, Tony Stark, Thor, Natasha Romanoff, Clint Barton">
+      <div class="title">Avengers: Endgame</div>
+      <span class="year">2018–2023</span>
+    </div>
+    <div class="film" data-title="Spider-Man: Far From Home" data-year="2023" data-characters="Peter Parker, Mysterio, Nick Fury">
+      <div class="title">Spider-Man: Far From Home</div>
+      <span class="year">2023</span>
+    </div>
+    <div class="film" data-title="Shang-Chi and the Legend of the Ten Rings" data-year="2023" data-characters="Shang-Chi, Wenwu, Xialing">
+      <div class="title">Shang-Chi and the Legend of the Ten Rings</div>
+      <span class="year">2023</span>
+    </div>
+    <div class="film" data-title="Black Panther: Wakanda Forever" data-year="2024" data-characters="Shuri, Nakia, Okoye, Namor">
+      <div class="title">Black Panther: Wakanda Forever</div>
+      <span class="year">2024</span>
+    </div>
+    <div class="film" data-title="Doctor Strange in the Multiverse of Madness" data-year="2024" data-characters="Stephen Strange, Wanda Maximoff, America Chavez">
+      <div class="title">Doctor Strange in the Multiverse of Madness</div>
+      <span class="year">2024</span>
+    </div>
+    <div class="film" data-title="Thor: Love and Thunder" data-year="2024" data-characters="Thor Odinson, Jane Foster, Valkyrie, Gorr">
+      <div class="title">Thor: Love and Thunder</div>
+      <span class="year">2024</span>
+    </div>
+    <div class="film" data-title="Ant-Man and the Wasp: Quantumania" data-year="2025" data-characters="Scott Lang, Hope van Dyne, Kang the Conqueror">
+      <div class="title">Ant-Man and the Wasp: Quantumania</div>
+      <span class="year">2025</span>
+    </div>
+    <div class="film" data-title="Guardians of the Galaxy Vol. 3" data-year="2025" data-characters="Peter Quill, Gamora, Rocket">
+      <div class="title">Guardians of the Galaxy Vol. 3</div>
+      <span class="year">2025</span>
+    </div>
+    <div class="film" data-title="The Marvels" data-year="2025" data-characters="Carol Danvers, Monica Rambeau, Kamala Khan">
+      <div class="title">The Marvels</div>
+      <span class="year">2025</span>
+    </div>
+  </div>
+
+  <div id="info-panel">
+    <p><em>Clicca su un film nella timeline per visualizzare i personaggi principali.</em></p>
+  </div>
+
+  <script>
+    // Aggiunge un listener a ciascun elemento .film per mostrare i dettagli nel pannello sotto
+    document.querySelectorAll('.film').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var title = el.getAttribute('data-title');
+        var year = el.getAttribute('data-year');
+        var chars = el.getAttribute('data-characters');
+
+        var html = '<h2>' + title + ' <span style="font-size:0.85em;color:#666;">(' + year + ')</span></h2>'
+                 + '<p><strong>Personaggi principali:</strong> ' + chars + '</p>';
+
+        document.getElementById('info-panel').innerHTML = html;
+        // Porta il pannello info in vista (utile su schermi piccoli)
+        document.getElementById('info-panel').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
